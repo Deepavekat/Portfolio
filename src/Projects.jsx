@@ -36,21 +36,21 @@ const projects = [
 ];
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 px-6">
+    <section id="projects" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-cyan-400 mb-10">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-cyan-400 mb-10">
           Projects
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project,index) => (
             <div
               key={index}
               className="bg-slate-800 rounded-xl overflow-hidden hover:scale-105 transition duration-500"
             >
               
-              <div className="p-6">
-                <h3 className="text-xl font-bold">
+              <div className="p-5 sm:p-6">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold">
                 {project.title}
                 </h3>
 
@@ -60,9 +60,11 @@ export default function Projects() {
   ))}
 </ul>
 
-                <button className="mt-5 bg-cyan-500 px-5 py-2 rounded-lg">
-                  View
-                </button>
+               <div className=" ml-6 mt-10 flex justify-center sm:justify-end">
+  <button className="w-full sm:w-auto bg-cyan-500 hover:bg-cyan-600 text-white px-5 py-2 rounded-lg transition duration-300">
+    View
+  </button>
+</div>
               </div>
             </div>
           ))}
