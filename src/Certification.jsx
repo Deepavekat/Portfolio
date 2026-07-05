@@ -38,7 +38,7 @@ export default function Certifications() {
               <h3 className="text-xl font-semibold">{cert.title}</h3>
 
               <p className="text-gray-300 mt-2">
-                <strong>Provider:</strong> {cert.provider}
+                <strong className="text-cyan-400">Provider:</strong> {cert.provider}
               </p>
 
               <p className="text-gray-400 mt-1">
