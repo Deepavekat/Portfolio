@@ -6,7 +6,7 @@ export default function About() {
           About Me
         </h2>
 
-        <p className="text-gray-300 text-xl indent-5 leading-10 pl-8">
+        <p className="text-gray-300 text-2xl indent-5 leading-10 pl-8">
                     Aspiring Front-End Developer with a background in
 Electrical and Electronics Engineering and hands-on
 experience in HTML, CSS, and JavaScript, seeking an
