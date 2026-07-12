@@ -1,32 +1,21 @@
-
-
+import { useState } from "react";
 import Navbar from "./Navbar";
-import Hero from  './frontpage'
-import About from "./About";
-import Skills from "./Skills";
-import Education from "./Education";
-import Certifications from "./Certification";
-import Projects from "./Projects";
-import Contact from "./Contact";
-import Footer from "./Footer"
-  /* 
-       */
-
+import Hero from "./frontpage";
+import Footer from "./Footer";
+import Alldetails from "./Alldetails";
 
 function App() {
+  const [showDetails, setShowDetails] = useState(false);
+
   return (
     <div className="bg-slate-950 text-white">
       <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Education />
-      <Certifications />
-      <Projects />
-      <Contact />
-      <Footer />
-       
 
+      <Hero onShowDetails={() => setShowDetails(true)} />
+
+      {showDetails && <Alldetails />}
+
+      <Footer />
     </div>
   );
 }

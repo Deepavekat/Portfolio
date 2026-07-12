@@ -1,6 +1,9 @@
-import myphoto from './assets/image.jpg'
+import myphoto from "./assets/image.jpg";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
-export default function Hero() {
+import { HiArrowRight } from "react-icons/hi";
+
+export default function Hero({ onShowDetails }) {
+   
   return (
     <section
       id="home"
@@ -19,13 +22,13 @@ export default function Hero() {
            I'm <span className="text-cyan-400">DEEPA V</span>
         </h1>
 
-        <p className="text-2xl sm:text-3xl md:text-5xl text-gray-400 mt-6 max-w-xl mx-auto">
+        <p className="text-2xl sm:text-3xl font-bold  md:text-5xl text-gray-400 mt-6 max-w-xl mx-auto">
           Frontend Developer 
         </p>
            {/* Social Icons */}
             <div className="flex justify-center items-center gap-4 mt-8 ">
               <a
-                href="https://deepavenkat093@gmail.com"
+                href="mailto:deepavenkat093@gmail.com"
                 className="bg-blue-300  p-4 rounded-lg shadow hover:scale-110 transition duration-300"
               >
                 <FaEnvelope size={22} />
@@ -44,9 +47,16 @@ export default function Hero() {
               >
                 <FaLinkedin size={22} />
               </a>
-
+                
             </div>
-       
+       <div className="flex justify-center mt-10">
+  <button
+    className="bg-blue-300 p-4 rounded-lg hover:scale-105 transition"
+    onClick={onShowDetails}
+  >
+    <HiArrowRight size={20} />
+  </button>
+</div>
         </div>
        
   
